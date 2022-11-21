@@ -1,13 +1,17 @@
-/*HOMEPAGE LINK*/
-.nav-link {
-    margin-left: 20px;
-    font-size: 15px;
-    font-family: sans-serif;
+#pagelogo {
+    width: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 1px;
 }
+
+
+
 
 /*UNIT NUMBER*/
 .unitnumtitle {
-    margin-left: 20px;
+    margin-left: 40px;
     font-size: 30px;
     font-family: sans-serif;
     color: #3c4141;
@@ -17,7 +21,7 @@
 /*VEHICLE INFORMATION CARD TABLE*/
 
 .vehicleinfo {
-    margin-left: 20px;
+    margin-left: 40px;
     min-width: 450px;
     font-family: sans-serif;
     font-size: 15px;
@@ -133,7 +137,7 @@
     border-radius: 5px 5px 0 0;
     overflow: hidden;
     border-collapse: collapse;
-    margin-left: 20px;
+    margin-left: 40px;
     margin-top: 40px;
 
 }
@@ -156,7 +160,7 @@
 }
 
 .submitbutton_oil {
-    margin-left: 20px;
+    margin-left: 40px;
     margin-top: 5px;
     border: 2px solid #76b5c5;
     border-radius: 25px;
@@ -181,7 +185,7 @@
     overflow: hidden;
     border-collapse: collapse;
     margin-top: 30px;
-    margin-left:20px;
+    margin-left:40px;
     
 }
  
@@ -202,7 +206,7 @@
 
 
 .submitbutton_repairs {
-    margin-left: 20px;
+    margin-left: 40px;
     margin-top: 5px;
     border: 2px solid #76b5c5;
     border-radius: 25px;
@@ -210,3 +214,14 @@
     font-weight: bold;
 }
 
+
+.issuesemail {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 13px;
+}

@@ -10,6 +10,8 @@
 
 }
 
+
+
 .dropdown-left {
     display: inline-block;
     margin-left: 350px;
@@ -34,13 +36,13 @@
 
 #title {
     display: block;
-    margin-left: 450px;
+    margin-left: 460px;
     margin-right: 350px;
     font-size: 25px;
 
 }
 
-#title1 {
+.title1 {
     margin-left: 480px;
     margin-top: 10px;
     font-size: 25px;
@@ -57,20 +59,26 @@
     margin: 30px auto;
 }
 
-.container form button {
-    background: #155a7b;
-    padding: 4px 8px;
-    border-radius: 10px;
-    border: 2px solid #155a7b;
-    outline: none;
-    color: #fff;
-    letter-spacing: 1px;
+#searchbox {
+    margin-left: auto;
     margin-right: auto;
-    margin-top: auto;
-    text-align: center;
+    display: inline-block;
 }
 
-.container input {
-    margin-left: 420px;
-    margin-top: 30px;
+#user_input {
+    display: inline-block;
+    margin-left: 500px;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+
+.trademark {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
 }

@@ -3,10 +3,8 @@
     <head>
 
         <!--MAIN PAGE NAV-->
-        <ul class="nav justify-content-center">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Go To Homepage</a>
-            </li>
+        <a href="index.html"><img src="vmsnoob_logocropped.png" alt="logo" id="pagelogo"></a>
+        
 
         <title>VMPnoob - Unit 101</title>
 
@@ -18,6 +16,15 @@
 
     </head>
     <body>
+
+        <script>
+
+            //This disables the 'Enter' key from submitting the OIL CHANGES LOG & OTHER REPAIRS forms
+            //function disable_enterkey(event) {
+                //event.preventDefault();
+            }
+           
+        </script>
 
 
 
@@ -102,6 +109,10 @@
                 <td>Expiry Date</td>
                 <td>01/01/2028</td>
             </tr>
+            <tr>
+                <td>Other</td>
+                <td>.</td>
+            </tr>
         </tbody>
     </table>
     </div>
@@ -130,7 +141,7 @@
             </tr>
         </tbody>
     </table>
-    <input type="submit" value ="Submit" class="submitbutton_oil">
+    <button type="submit" class="submitbutton_oil"</button>>Submit</button>
     <form></form>
 
 
@@ -138,7 +149,7 @@
 
     <!--OTHER REPAIRS/ MAINTENANCE TABLE-->
     <form method="post" action="process-repair-form.php">
-    <table class="other_repairs">
+    <table class="other_repairs" >
         <thead>
             <tr>
                 <th colspan="4">OTHER REPAIRS/MAINTENANCE</th>
@@ -158,9 +169,13 @@
                 <td><input type="text"></td>
             </tr>
         </tbody>
+        <script>onkeypress="return eventkeyCode !=13;"</script>
     </table>
-    <input type="submit" value="Submit" class="submitbutton_repairs">
+    <button type="submit" class="submitbutton_repairs" onclick="disable_enterkey(event)">Submit</button>
     </form>
 
+    <div class="issuesemail">
+        <p> ☎️Customer Service Line: 1-800-VMS-noob</p>
+    </div>
     </body>
 </html>

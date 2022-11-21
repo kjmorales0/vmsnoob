@@ -9,7 +9,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-        <title>VMPnoob</title>
+        <title>VMSnoob</title>
 
         <!--VMP.noob LOGO-->
         <img src="vmsnoob_logocropped.png" alt="logo" id="pagelogo">
@@ -18,13 +18,13 @@
 
       <body>
 
-        <!--(JAVASCRIPT) USER INPUT TO REDIRECT TO ANOTHER PAGE-->
+        <!--(JAVASCRIPT) USER INPUT TO REDIRECT TO ANOTHER PAGE THROUGH "SEARCH BAR"-->
         <script>
           function redirect_page() {
             var user_search = document.getElementById("user_input").value;
             var error = "Please type in 3-digit unit number";
 
-            if (user_search.length <= 2 || user_search.length >= 4) {
+            if (user_search.length < 3 || user_search.length > 3) {
               alert(error);
             }
 
@@ -36,15 +36,16 @@
         </script>
 
 
-
-
-        <h3 id="title1">Enter Vehicle Unit Number</h3>
-
-        <!--Search Bar-->
+        <!--1ST BOX-->
+        <div class="title1">
+        <h3>Enter Vehicle Unit Number</h3>
+        </div>
         
-            <input type="text" id="user_input" placeholder="Search">
-            <button type="button"  onclick="redirect_page()">Search</button>
 
+            <!--Search Bar-->
+            <input type="text" id="user_input" placeholder="Search">
+            <button type="button"  id="searchbox" onclick="redirect_page()">Search</button>
+            
           
         
 
@@ -97,7 +98,9 @@
           </ul>
         </div>
 
-
+        <div class="trademark">
+        <p>All Rights Reserved.® Created By Karla For The People 🌏</p>
+      </div>
       </body>
 
 

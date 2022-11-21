@@ -5,21 +5,27 @@
         <!--MAIN PAGE NAV-->
         <ul class="nav justify-content-center">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Homepage</a>
+              <a class="nav-link active" aria-current="page" href="index.html">Go To Homepage</a>
             </li>
 
         <title>VMPnoob - Unit 101</title>
 
         <!--CSS for units pages-->
-        <link href="styles.css" rel="stylesheet">
+        <link href="units.css" rel="stylesheet">
 
-        <h1><a href="index.html">VMP.noob</a></h1>
-        <h2>Unit 101</h2>
+        
+        <h2 class="unitnumtitle">Unit 101</h2>
 
     </head>
     <body>
 
+
+
+
+
         <!--VEHICLE INFORMATION CARD TABLE-->
+        <div class="row">
+            <div class="column">
         <table class="vehicleinfo">
             <thead>
             <tr>
@@ -58,12 +64,51 @@
 
             </tbody>
     </table>
+    </div>
+    
 
 
 
+    <!--REGISTRATION & INSURANCE DETAILS TABLE-->
+    <div class="column">
+    <table class="insurancetable">
+        <thead>
+            <tr>
+                <th colspan="2">REGISTRATION & INSURANCE DETAILS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Registration Expiry</td>
+                <td>01/01/2025</td>
+            </tr>
+            <tr>
+                <td>Vehicle Status</td>
+                <td>Active</td>
+            </tr>
+            <tr>
+                <td>Registration Number</td>
+                <td>298572982-0</td>
+            </tr>
+            <tr>
+                <td>Insurance Company</td>
+                <td>AllState</td>
+            </tr>
+            <tr>
+                <td>Policy #</td>
+                <td>JNEC7UDC</td>
+            </tr>
+            <tr>
+                <td>Expiry Date</td>
+                <td>01/01/2028</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    </div>
 
     <!--OIL CHANGE LOG TABLE-->
-
+    <form method="post" action="process-oilchange-form.php">
     <table class="oilchanges">
         <thead>
             <tr>
@@ -78,52 +123,44 @@
         </thead>
             <tbody>
             <tr>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
+                <td><input type="text" id="date"></td>
+                <td><input type="text" id="current_kms"></td>
+                <td><input type="text" id="labour"></td>
+                <td></td>
             </tr>
         </tbody>
     </table>
+    <input type="submit" value ="Submit" class="submitbutton_oil">
+    <form></form>
 
 
 
 
     <!--OTHER REPAIRS/ MAINTENANCE TABLE-->
-
-    <!--<table class="other_repairs">
+    <form method="post" action="process-repair-form.php">
+    <table class="other_repairs">
         <thead>
             <tr>
                 <th colspan="4">OTHER REPAIRS/MAINTENANCE</th>
             </tr>
             <tr>
-                <td>Date</td>
-                <td>Vendor</td>
+                <td>Date (mm/dd/yyyy)</td>
+                <td>Provider</td>
                 <td>Description </td>
                 <td>Amount (before GST)</td>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><input type="text"></td>
+                <td><input type="radio" id="inhouse mech" name="providers"><label for="inhousemech">In house Mech </label><input type="radio" id="dealer" name="providers"><label for="dealer">Dealer</label></td>
+                <td><textarea rows="5"></textarea></td>
+                <td><input type="text"></td>
             </tr>
-        </tbody>-->
+        </tbody>
     </table>
-
-
-
-
-
-
-
-
-
-
-
-
+    <input type="submit" value="Submit" class="submitbutton_repairs">
+    </form>
 
     </body>
 </html>

@@ -1,18 +1,22 @@
-
-/*UNIT NUMBER*/
-.unitname {
+/*HOMEPAGE LINK*/
+.nav-link {
     margin-left: 20px;
-    margin-top: 30px;
+    font-size: 15px;
     font-family: sans-serif;
 }
 
+/*UNIT NUMBER*/
+.unitnumtitle {
+    margin-left: 20px;
+    font-size: 30px;
+    font-family: sans-serif;
+    color: #3c4141;
+    margin-bottom: 10px;
+}
 
-
-/*VEHICLE INFORMATION TABLE*/
+/*VEHICLE INFORMATION CARD TABLE*/
 
 .vehicleinfo {
-
-
     margin-left: 20px;
     min-width: 450px;
     font-family: sans-serif;
@@ -26,9 +30,7 @@
     border-radius: 5px 5px 0 0;
     overflow: hidden;
     border-collapse: collapse;
-
 }
-
 
 .vehicleinfo thead tr {
     background-color: #155a7b;
@@ -38,31 +40,83 @@
     font-size: 18px;
 }
 
-
 .vehicleinfo th, td {
     padding: 08px 12px;
 }
-
 
 .boldtitle {
     font-weight: bold;
 }
 
-
 .vehicleinfo tbody tr {
     border-bottom: 1px solid #dddddd;
 }
-
 
 .vehicleinfo tbody tr:nth-of-type(even) {
     background-color: #f3f3f3;
 }
 
-
 .vehicleinfo tbody tr:last-of-type {
     border-bottom: 5px solid #155a7b;
 }
 
+/*SIDE BY SIDE TABLES*/
+*{
+    box-sizing: border-box;
+}
+
+.row{
+    display: flex;
+    margin-left:-5px;
+    margin-right: -5px;
+    
+}
+
+.column{
+    flex: 50%;
+    padding: 5px;
+}
+
+/*REGISTRATION & INSURANCE DETAILS TABLE*/
+.insurancetable {
+    min-width: 450px;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: centre;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    border-collapse: collapse;
+}
+
+.insurancetable thead tr {
+    background-color: #3d6939;
+    color: #ffffff;
+    text-align: centre;
+    letter-spacing: 1.5px;
+    font-size: 18px;
+    
+}
+
+.insurancetable th, td {
+    padding: 08px 12px;
+}
+
+.insurancetable tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.insurancetable tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.insurancetable tbody tr:last-of-type {
+    border-bottom: 5px solid #3d6939;
+}
 
 /*OIL CHANGES LOG TABLE*/
 
@@ -85,17 +139,74 @@
 }
 
 
-.oilchanges thead tr {
+.oilchanges thead th {
     background-color: #76b5c5;
     color: #ffffff;
     text-align: centre;
     letter-spacing: 1.5px;
     font-size: 18px;
+    padding: 08px 12px;
+
 
 }
 
+.oilchanges td {
+    border: 1px solid #D7dfe0;
+    font-weight: bold;
+}
 
+.submitbutton_oil {
+    margin-left: 20px;
+    margin-top: 5px;
+    border: 2px solid #76b5c5;
+    border-radius: 25px;
+    padding: 5px 8px;
+    font-weight: bold;
+}
+
+
+
+/*OTHER REPAIRS/MAINTENANCE TABLE*/
 .other_repairs {
-    margin-top: 50px;
+    min-width: 450px;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: centre;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    border-collapse: collapse;
+    margin-top: 30px;
+    margin-left:20px;
+    
+}
+ 
+.other_repairs thead th{
+    background-color: #76b5c5;
+    color: #ffffff;
+    text-align: centre;
+    letter-spacing: 1.5px;
+    font-size: 18px;
+    padding: 5px;
+}
+
+
+.other_repairs td {
+    border: 1px solid #D7dfe0;
+    font-weight: bold;
+}
+
+
+.submitbutton_repairs {
+    margin-left: 20px;
+    margin-top: 5px;
+    border: 2px solid #76b5c5;
+    border-radius: 25px;
+    padding: 5px 8px;
+    font-weight: bold;
 }
 

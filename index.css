@@ -1,5 +1,15 @@
 
 
+#pagelogo {
+    width: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    margin-top: 10px;
+
+}
+
 .dropdown-left {
     display: inline-block;
     margin-left: 350px;
@@ -23,14 +33,17 @@
 }
 
 #title {
+    display: block;
     margin-left: 450px;
-    margin-top: 50px;
+    margin-right: 350px;
+    font-size: 25px;
 
 }
 
 #title1 {
-    margin-left: 470px;
-    margin-top: 50px;
+    margin-left: 480px;
+    margin-top: 10px;
+    font-size: 25px;
 }
 
 #vmpnoobtitle {

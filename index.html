@@ -11,25 +11,48 @@
 
         <title>VMPnoob</title>
 
+        <!--VMP.noob LOGO-->
+        <img src="vmsnoob_logocropped.png" alt="logo" id="pagelogo">
 
-    </head>
+      </head>
+
+      <body>
+
+        <!--(JAVASCRIPT) USER INPUT TO REDIRECT TO ANOTHER PAGE-->
+        <script>
+          function redirect_page() {
+            var user_search = document.getElementById("user_input").value;
+            var error = "Please type in 3-digit unit number";
+
+            if (user_search.length <= 2 || user_search.length >= 4) {
+              alert(error);
+            }
+
+            if (user_search == "101") {
+              window.location.href = "file:///C:/Users/karla/OneDrive/Documentos/vmsnoob/101.html";
+            }
+          };
+      
+        </script>
 
 
-    <h3 id="title1">Enter Vehicle Unit Number</h3>
-
-    <!--Search Bar-->
-    <div class="container">
-      <form>
-        <input type="text" placeholder="Search">
-        <button type="'submit">Search</button>
-      </form>
-    </div>
 
 
-    <hr class="line">
+        <h3 id="title1">Enter Vehicle Unit Number</h3>
+
+        <!--Search Bar-->
+        
+            <input type="text" id="user_input" placeholder="Search">
+            <button type="button"  onclick="redirect_page()">Search</button>
+
+          
+        
 
 
-      <h2 id="title">Find Unit Number By Division</h2>
+        <hr class="line">
+
+
+        <h2 id="title">Find Unit Number By Division</h2>
 
 
 
@@ -40,9 +63,9 @@
           Sprayfoam Division
         </button>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="unit123.html">Unit 123</a></li>
-          <li><a class="dropdown-item" href="unit122.html">Unit 122</a></li>
-          <li><a class="dropdown-item" href="unit130.html">Unit 132</a></li>
+          <li><a class="dropdown-item" href="123.html">Unit 123</a></li>
+          <li><a class="dropdown-item" href="122.html">Unit 122</a></li>
+          <li><a class="dropdown-item" href="130.html">Unit 132</a></li>
         </ul>
       </div>
 
@@ -54,9 +77,9 @@
             Paint Division
           </button>
          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="unit101.html">Unit 101</a></li>
-            <li><a class="dropdown-item" href="unit132.html">Unit 132</a></li>
-            <li><a class="dropdown-item" href="unit144.html">Unit 144</a></li>
+            <li><a class="dropdown-item" href="101.html">Unit 101</a></li>
+            <li><a class="dropdown-item" href="132.html">Unit 132</a></li>
+            <li><a class="dropdown-item" href="144.html">Unit 144</a></li>
           </ul>
         </div>
 
@@ -75,7 +98,7 @@
         </div>
 
 
-    </body>
+      </body>
 
 
 

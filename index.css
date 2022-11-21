@@ -1,0 +1,63 @@
+
+
+.dropdown-left {
+    display: inline-block;
+    margin-left: 350px;
+    padding: 15px;
+    margin-top: 50px;
+
+
+}
+
+.dropdown-center {
+    display: inline-block;
+    padding: 15px;
+    margin: auto;
+}
+
+.dropdown-right {
+    display: inline-block;
+    padding: 15px;
+    margin: auto;
+
+}
+
+#title {
+    margin-left: 450px;
+    margin-top: 50px;
+
+}
+
+#title1 {
+    margin-left: 470px;
+    margin-top: 50px;
+}
+
+#vmpnoobtitle {
+    margin: 50px 300px 0px 300px;
+}
+
+.line {
+    border: 1px solid #155a7b;
+
+    width: 70%;
+    margin: 30px auto;
+}
+
+.container form button {
+    background: #155a7b;
+    padding: 4px 8px;
+    border-radius: 10px;
+    border: 2px solid #155a7b;
+    outline: none;
+    color: #fff;
+    letter-spacing: 1px;
+    margin-right: auto;
+    margin-top: auto;
+    text-align: center;
+}
+
+.container input {
+    margin-left: 420px;
+    margin-top: 30px;
+}

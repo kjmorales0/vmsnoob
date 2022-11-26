@@ -6,13 +6,13 @@
         <a href="index.html"><img src="vmsnoob_logocropped.png" alt="logo" id="pagelogo"></a>
         
 
-        <title>VMPnoob - Unit 101</title>
+        <title>VMPnoob - Unit 099</title>
 
         <!--CSS for units pages-->
         <link href="units.css" rel="stylesheet">
 
         
-        <h2 class="unitnumtitle">Unit 101</h2>
+        <h2 class="unitnumtitle">Unit 099</h2>
 
 
     </head>
@@ -24,14 +24,14 @@
     //"Oil Change History" Button Redirects you to the Oil Changes Table page
     function oilchangestable() {
         document.getElementById("oilchangehistory").value;
-        window.location.href = "http://localhost:3000/101_oilchangestable.php";
+        window.location.href = "http://localhost:3000/099_table_oilchanes.php"; 
         };
           
 
     //"Maintenance History" button redirects you to the Other Repairs & Maintenance table page
     function otherrepairstable(){
         document.getElementById("repairstable").value;
-        window.location.href = "http://localhost:3000/101_otherrepairstable.php";
+        window.location.href = "http://localhost:3000/099_table_otherrepairs.php";
         }; 
 
 
@@ -160,7 +160,7 @@
 
     <!--OIL CHANGE LOG TABLE-->
     
-    <form name="oilform" method="post" action="process-oilchange-form.php" onsubmit="required()">
+    <form name="oilform" method="post" action="099_processform_oilchanges.php" onsubmit="required()">
     <table class="oilchanges">
         <thead>
             <tr>
@@ -199,7 +199,7 @@
 
 
     <!--OTHER REPAIRS/ MAINTENANCE TABLE-->
-    <form method="post" action="process-repair-form.php">
+    <form method="post" action="099_processform_otherrepairs.php">
     <table class="other_repairs" >
         <thead>
             <tr>

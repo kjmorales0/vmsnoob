@@ -7,11 +7,15 @@
         <link href="units.css" rel="stylesheet">
         
         <title>Maintenance History</title>
-        <h1>Maintenance History</h1>
+
+        <!--Header-->
+        <h1 class="tablestitle">Maintenance History</h1>
   
     </head>
     <body>
-    
+
+        <!--  OTHER REPAIRS TABLE-->
+        <!--PHP code to connect to database and display selected results on page-->
         <table class="table_otherrepairs">
             <thead>
             <tr>
@@ -22,19 +26,18 @@
                 <th>Total Amount</th>
             </tr>
             </thead>
-
             <tbody>
-
 
                 <?php
 
+                //Connect to database
                 $conn = mysqli_connect("localhost", "root", "", "units");
                 // Check connection
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
                 }
 
-                $sql = "SELECT unit_num, date1, providers, description, total_amount FROM other_repairs";
+                $sql = "SELECT unit_num, date1, providers, description, total_amount FROM other_repairs ORDER BY date1 DESC ";
             
                 $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
@@ -53,6 +56,7 @@
             </tbody>
         </table>
     
+
     </body>
 </html>
 

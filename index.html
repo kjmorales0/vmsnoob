@@ -2,6 +2,7 @@
 
 <html lang="en">
     <head>
+
         <!--CSS for index page-->
         <link href="index.css" rel="stylesheet">
 
@@ -14,55 +15,61 @@
         <!--VMP.noob LOGO-->
         <img src="vmsnoob_logocropped.png" alt="logo" id="pagelogo">
 
-      </head>
+        <!--Quick Look Up Button-->
+        <button type="button"   id="lookuplink" class="lookuplink" onclick="lookuppage()">Quick Look Up</button>
 
+      </head>
       <body>
 
-        <!--(JAVASCRIPT) USER INPUT TO REDIRECT TO ANOTHER PAGE THROUGH "SEARCH BAR"-->
+        
         <script>
+
+          //function to redirect to QUICK LOOK UP page after cliking "QUICK LOOK UP button
+          function lookuppage() {
+            document.getElementById("lookuplink").value;
+            window.location.href = "http://localhost:3000/quicklookup.php"
+          };
+
+          // function to redirect user input to another page through "SEARCH BAR"-->
           function redirect_page() {
             var user_search = document.getElementById("user_input").value;
-            var error = "Please type in 3-digit unit number";
+            var error = "Unit Not Found. Try Again";
 
-            if (user_search.length < 3 || user_search.length > 3) {
+            if (user_search.length < 2 || user_search.length > 3) {
               alert(error);
             }
 
             if (user_search == "101") {
-              window.location.href = "http://localhost:3000/101.html";
+              window.location.href = "http://localhost:3000/101.php";
             }
             else if (user_search == "123") {
-              window.location.href = "http://localhost:3000/123.html";
+              window.location.href = "http://localhost:3000/123.php";
             }
-            else if (user_search == "099"){
-              window.location.href = "http://localhost:3000/099.html";
+            else if (user_search == "99"){
+              window.location.href = "http://localhost:3000/99.php";
             }
-            else{
-              alert("This could be your company's vehicle information page. Contact us today for a quote!")
-            }
-            };
+          };
       
         </script>
 
-
-        <!--1ST BOX-->
-        <div class="title1">
+       
+        <div class="searchboxtitle">
         <h3>Enter Vehicle Unit Number</h3>
         </div>
-        
 
-            <!--Search Bar-->
+            <!--Search Bar Input-->
             <input type="text" id="user_input" placeholder="Search">
+
+            <!--Search Button-->
             <button type="button"  id="searchbox" onclick="redirect_page()">Search</button>
             
           
-      
+        <!--Horizontal line-->
         <hr class="line">
 
 
-        <h2 id="title">Find Unit Number By Division</h2>
-
-
+        
+        <h2 id="findbydivtitle">Find Unit Number By Division</h2>
 
 
         <!--Sprayfoam Division Units/ DropDown Menu-->
@@ -71,42 +78,37 @@
           Sprayfoam Division
         </button>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="123.html">Unit 123</a></li>
-          
+          <li><a class="dropdown-item" href="123.php">Unit 123</a></li> 
         </ul>
       </div>
 
 
       <!--Paint Division Units/ DropDown Menu-->
-
           <div class="dropdown-center">
           <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             Paint Division
           </button>
          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="101.html">Unit 101</a></li>
-            
+            <li><a class="dropdown-item" href="101.php">Unit 101</a></li>
           </ul>
         </div>
 
 
       <!--Commercial Units/ DropDown Menu-->
-
           <div class="dropdown-right">
           <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             Commercial Division
           </button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="unit099.html">Unit 099</a></li>
-            
+            <li><a class="dropdown-item" href="99.php">Unit 099</a></li>
           </ul>
         </div>
 
+        <!--Trademark - Bottom of Page-->
         <div class="trademark">
         <p>All Rights Reserved.® Created By Karla For The People 🌏</p>
       </div>
+
+
       </body>
-
-
-
 </html>

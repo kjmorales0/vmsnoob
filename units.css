@@ -1,3 +1,5 @@
+
+/*LOGO -TOP OF SCREEN - */
 #pagelogo {
     width: 15%;
     margin-left: auto;
@@ -7,9 +9,7 @@
 }
 
 
-
-
-/*UNIT NUMBER*/
+/*Company Name - Unit Number*/
 .unitnumtitle {
     margin-left: 40px;
     font-size: 30px;
@@ -18,8 +18,8 @@
     margin-bottom: 10px;
 }
 
-/*VEHICLE INFORMATION CARD TABLE*/
 
+/*VEHICLE INFORMATION CARD TABLE*/
 .vehicleinfo {
     margin-left: 40px;
     min-width: 450px;
@@ -64,6 +64,7 @@
     border-bottom: 5px solid #155a7b;
 }
 
+
 /*SIDE BY SIDE TABLES*/
 *{
     box-sizing: border-box;
@@ -80,6 +81,7 @@
     flex: 50%;
     padding: 5px;
 }
+
 
 /*REGISTRATION & INSURANCE DETAILS TABLE*/
 .insurancetable {
@@ -122,8 +124,8 @@
     border-bottom: 5px solid #3d6939;
 }
 
-/*OIL CHANGES LOG TABLE*/
 
+/*OIL CHANGES LOG TABLE*/
 .oilchanges {
     min-width: 450px;
     font-family: sans-serif;
@@ -159,6 +161,7 @@
     font-weight: bold;
 }
 
+/*Submit Button - Oil Changes*/
 .submitbutton_oil {
     margin-left: 40px;
     margin-top: 5px;
@@ -204,7 +207,7 @@
     font-weight: bold;
 }
 
-
+/*Submit Button - Maintenance History*/
 .submitbutton_repairs {
     margin-left: 40px;
     margin-top: 5px;
@@ -215,18 +218,7 @@
 }
 
 
-.issuesemail {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: sans-serif;
-    font-size: 13px;
-}
-
-
+/*OIL CHANGES HISTORY TABLE - FETCH DATA FROM DATABASE- DISPLAYS RESULTS FROM DATABASE*/
 .table_oilchanges {
     margin-left: auto;
     margin-right: auto;
@@ -271,6 +263,8 @@
     border-bottom: 5px solid #e0912a;
 }
 
+
+/*MAINTENANCE HISTORY TABLE - FETCH DATA FROM DATABASE- DISPLAYS RESULTS FROM DATABASE*/
 .table_otherrepairs {
     margin-left: auto;
     margin-right: auto;
@@ -297,8 +291,6 @@
         font-size: 15px;
 }
 
-
-
 .table_otherrepairs  th, td {
     padding: 08px 12px;
     text-align: center;
@@ -317,6 +309,8 @@
         border-bottom: 5px solid #6860c1;
 }
 
+
+/* OIL CHANGES HISTORY + MAINTENANCE HISTORY buttons*/
 .buttons {
     margin-top:30px;
     margin-left: 40px;
@@ -326,5 +320,24 @@
     font-weight: bold;
 }
 
+.tablestitle {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: sans-serif;
+    text-align: center;
+}
 
+
+/*CUSTOMER SERVICE # - BOTTOM OF PAGE*/
+.customer_service {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 13px;
+}
 

@@ -49,7 +49,7 @@ echo "Record saved.";
 
 
 //Redirects you back to the unit page
-header("location:101.php");
+header("location:99.php");
 
 
 

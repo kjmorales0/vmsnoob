@@ -37,13 +37,13 @@
                     die("Connection failed: " . $conn->connect_error);
                 }
 
-                $sql = "SELECT unit_num, date1, providers, description, total_amount FROM other_repairs ORDER BY date1 DESC ";
+                $sql = "SELECT unit_num, date, providers, description, total_amount FROM other_repairs WHERE unit_num = 101 ORDER BY date DESC ";
             
                 $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
                 // output data of each row
                     while($row = $result->fetch_assoc()) {
-                        echo "<tr><td>" . $row["unit_num"]. "</td><td>" . $row["date1"]. "</td><td>"
+                        echo "<tr><td>" . $row["unit_num"]. "</td><td>" . $row["date"]. "</td><td>"
                             . $row["providers"]. "</td><td>" .$row["description"] . "</td><td>" . $row["total_amount"]."</td></tr>";
                     }
                         echo "</table>";

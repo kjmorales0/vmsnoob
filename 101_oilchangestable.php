@@ -35,7 +35,7 @@
                 }
 
                 //SQL query to display selected information
-                $sql = " SELECT unit_num, date, providers, labour_hours, current_kms, next_oil_change FROM oil_changes ORDER BY date DESC ";
+                $sql = " SELECT unit_num, date, providers, labour_hours, current_kms, next_oil_change FROM oil_changes WHERE unit_num = 101 ORDER BY date DESC ";
                 $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
                 // output data of each row
@@ -53,7 +53,7 @@
             </tbody>
         </table>
     
-        
+
     </body>
 </html>
 

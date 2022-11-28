@@ -18,6 +18,12 @@
     margin-bottom: 10px;
 }
 
+/*Calculator to calculate next oil change*/
+.calculator_box {
+    margin-left: 40px;
+    font-size: sans-serif;
+
+}
 
 /*VEHICLE INFORMATION CARD TABLE*/
 .vehicleinfo {

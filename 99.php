@@ -6,30 +6,29 @@
         <a href="index.html"><img src="vmsnoob_logocropped.png" alt="logo" id="pagelogo"></a>
         
 
-        <title>VMPnoob - Unit 101</title>
+        <title>VMPnoob - Unit 99</title>
 
         <!--CSS for units pages-->
         <link href="units.css" rel="stylesheet">
 
         <!--Company Name - Unit #-->
-        <h2 class="unitnumtitle">Empire Drywall - Unit 101</h2>
+        <h2 class="unitnumtitle">Empire Drywall - Unit 99</h2>
 
-            <!--Calculator box for next oil change-->
-            <div class="calculator_box">
+         <!--Calculator box for next oil change-->
+         <div class="calculator_box">
                 <h3 id="answer"></h3>
                     <input type="text" id="num1" placeholder="Enter Current KMs">
                     <input type="text" id="num2" placeholder="5000kms" readonly>
                     <button onclick="calculate()">Calculate</button>
             </div>
         
-
     </head>
     <body>
 
         <script>
 
-        //Function to calculate next oil change in kilometers
-        function calculate() {
+             //Function to calculate next oil change in kilometers
+             function calculate() {
             var field1=document.getElementById("num1").value;
             var field2=document.getElementById("num2").value;
 
@@ -41,22 +40,32 @@
     };
 
 
-
     //"Oil Change History" Button Redirects you to the Oil Changes Table page
     function oilchangestable() {
         document.getElementById("oilchangehistory").value;
-        window.location.href = "http://localhost:3000/101_oilchangestable.php";
+        window.location.href = "http://localhost:3000/99_oilchangestable.php";
         };
           
 
     //"Maintenance History" button redirects you to the Other Repairs & Maintenance table page
     function otherrepairstable(){
         document.getElementById("repairstable").value;
-        window.location.href = "http://localhost:3000/101_otherrepairstable.php";
+        window.location.href = "http://localhost:3000/99_otherrepairstable.php";
         }; 
 
 
-    
+        
+
+        //function km_calc() {
+            //var user_input = document.getElementById("kms").value;
+            //var new_km = kms + 5000;
+               // if (user_input.length != 0) {
+                    //document.log new_km;
+                //}
+       // };
+
+
+        
         </script>
 
 
@@ -90,7 +99,7 @@
                     }
  
                     // SQL query to select data from database
-                    $sql = " SELECT * FROM vehicle_units WHERE unit_num = 101 ";
+                    $sql = " SELECT * FROM vehicle_units WHERE unit_num = 99 ";
                     $result = $mysqli->query($sql);
                     $mysqli->close();
                     ?>
@@ -168,7 +177,7 @@
         }
   
         // SQL query to select data from database
-        $sql = " SELECT * FROM regist_insur WHERE unit_num = 101 ";
+        $sql = " SELECT * FROM regist_insur WHERE unit_num = 99 ";
         $result = $mysqli->query($sql);
         $mysqli->close();
         ?>
@@ -213,7 +222,7 @@
 
     <!--OIL CHANGE LOG USER INPUT TABLE-->
     
-    <form name="oilform" method="post" action="101_processform_oilchanges.php" onsubmit="required()">
+    <form name="oilform" method="post" action="99_processform_oilchanges.php" onsubmit="required()">
     <table class="oilchanges">
         <thead>
             <tr>
@@ -230,7 +239,7 @@
         <tbody>
             <tr>
                 <!--USER INPUT BOXES-->
-                <td><input type="text" value="101"  name="unit_num" readonly></td>
+                <td><input type="text" value="99"  name="unit_num" readonly></td>
                 <td><input type="date" id="date" name="date" required></td>
                 <td><input type="text" name="providers" required></td>
                 <td><input type="text" id="labour_hours" name="labour_hours" required></td>
@@ -250,7 +259,7 @@
 
 
     <!--OTHER REPAIRS/ MAINTENANCE TABLE-->
-    <form method="post" action="101_processform_otherrepairs.php">
+    <form method="post" action="99_processform_otherrepairs.php">
     <table class="other_repairs" >
         <thead>
             <tr>
@@ -267,7 +276,7 @@
         <tbody>
             <tr>
                 <!--USER INPUT BOXES-->
-                <td><input type="text" value="101"  name="unit_num" readonly></td>
+                <td><input type="text" value="99"  name="unit_num" readonly></td>
                 <td><input type="date" name="date" required></td>
                 <td><input type="text" name="providers" required></td>
                 <td><textarea  name="description" required></textarea></td>

@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html lan="en">
+
     <head>
         
         <!--CSS for units pages-->
         <link href="units.css" rel="stylesheet">
         
-        <title>Vehicle Quick Look Up</title>
-        <h1 class="tablestitle">Vehicle Quick Look Up</h1>
+        <title>Oil Change History</title>
+        <h1 class="tablestitle">Oil Change History</h1>
   
     </head>
     <body>
 
-        <!--QUICK LOOK UP TABLE-->
-        <!--PHP code to connect to database and display information on page-->
+    <!--OIL CHANGES HISTORY table-->
+    <!--PHP code to connect to database and display results-->
         <table class="table_oilchanges">
             <thead>
             <tr>
                 <th>Unit</th>
-                <th>Driver</th>
-                <th>Division</th>
+                <th>Date</th>
+                <th>Provider</td>
+                <th>Labour Hours</th>
+                <th>Current KMs</th>
             </tr>
-        </thead>
+            </thead>
             <tbody>
 
                 <?php
-
                 //Connect to database
                 $conn = mysqli_connect("localhost", "root", "", "units");
                 // Check connection
@@ -32,14 +34,14 @@
                     die("Connection failed: " . $conn->connect_error);
                 }
 
-                //SQL query to display the selected information only
-                $sql = " SELECT unit_num,driver, division FROM vehicle_units";
+                //SQL query to display selected information
+                $sql = " SELECT * FROM oil_changes WHERE unit_num = 99 ORDER BY date DESC ";
                 $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
-
-                    // output data of each row
+                // output data of each row
                     while($row = $result->fetch_assoc()) {
-                        echo "<tr><td>" . $row["unit_num"]. "</td><td>" . $row["driver"] . "</td><td>" .$row["division"]. "</td></tr>";
+                        echo "<tr><td>" . $row["unit_num"]. "</td><td>" . $row["date"] . "</td><td>" .$row["providers"]. "</td><td>"
+                            . $row["labour_hours"]. "</td><td>" .$row["current_kms"] . "</td></tr>";
                     }
                         echo "</table>";
                     } else { 
@@ -48,11 +50,11 @@
 
                 $conn->close();
                 ?>
-
             </tbody>
         </table>
     
-
+        
     </body>
 </html>
+
 

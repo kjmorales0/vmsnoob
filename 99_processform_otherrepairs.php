@@ -1,5 +1,8 @@
 <?php
 
+//This php form is connected to the  html form " other repairs" in 99.php
+//This connects to the database and saves the user input into the database
+
 //php variables
 $unit_num = filter_input(INPUT_POST, "unit_num", FILTER_VALIDATE_INT);
 $date = $_POST["date"];
@@ -31,6 +34,8 @@ $sql = "INSERT INTO other_repairs (unit_num, date, providers, description, total
         VALUES (?,?,?,?,?)";
 
 $stmt = mysqli_stmt_init($conn);
+
+
 
 if ( ! mysqli_stmt_prepare($stmt, $sql)) {
     die(mysqli_error($conn));

@@ -347,3 +347,33 @@
     font-size: 13px;
 }
 
+
+/*Extra boxes in "oil changes history" and " maintenance history" pages*/
+.extra_boxes{
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: centre;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    border-collapse: collapse;
+    padding: 10px 12px;
+    font-weight: bold;
+}
+
+.extra_boxes thead th {
+    background-color: #297edf;
+    color: #ffffff;
+    text-align: centre;
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    padding: 10px 15px;
+}

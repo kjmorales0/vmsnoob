@@ -12,6 +12,7 @@
     <body>
 
         <!--QUICK LOOK UP TABLE-->
+        <!--The quick look up table lets you see all of the units and their most important information on one page-->
         <!--PHP code to connect to database and display information on page-->
         <table class="table_oilchanges">
             <thead>

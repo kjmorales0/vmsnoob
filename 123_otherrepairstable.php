@@ -15,7 +15,7 @@
     <body>
 
         <!--  OTHER REPAIRS TABLE-->
-        <!--PHP code to connect to database and display selected results on page-->
+        <!--PHP code connects to database and displays selected results on page-->
         <table class="table_otherrepairs">
             <thead>
             <tr>
@@ -37,6 +37,7 @@
                     die("Connection failed: " . $conn->connect_error);
                 }
 
+                //SQL query to select columns to show from database
                 $sql = "SELECT unit_num, date, providers, description, total_amount FROM other_repairs WHERE unit_num = 123 ORDER BY date DESC ";
             
                 $result = $conn->query($sql);

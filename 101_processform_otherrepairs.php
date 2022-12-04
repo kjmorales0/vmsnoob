@@ -1,4 +1,7 @@
 <?php
+//This php form is connected to the  html form " other repairs" in 101.php
+//This connects to the database and saves the user input into the database
+
 
 //php variables
 $unit_num = filter_input(INPUT_POST, "unit_num", FILTER_VALIDATE_INT);

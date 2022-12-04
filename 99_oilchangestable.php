@@ -24,7 +24,6 @@
                 <th>Current KMs</th>
             </tr>
             </thead>
-            <tbody>
 
                 <?php
                 //Connect to database
@@ -51,6 +50,30 @@
                 $conn->close();
                 ?>
             </tbody>
+  
+        <!--Total Labour Hours Box, Sums up all the values for column "labour_hours"-->
+        <table class="extra_boxes">
+            <thead>
+                <tr>
+                    <th>Total Labour Hours </th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                        <?php 
+                    $con = mysqli_connect("localhost", "root", "", "units");
+                    $results = mysqli_query($con, "SELECT sum(labour_hours) FROM oil_changes WHERE unit_num = 99 ")
+                        or die(mysqli_error());
+                    while($rows = mysqli_fetch_array($results)) {?>
+                    <?php echo $rows['sum(labour_hours)'] ?>
+                    
+                    <?php
+                    }
+                    ?>
+                    </td>
+                </tr>
+                </tbody>
         </table>
     
         

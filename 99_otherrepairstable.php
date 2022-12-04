@@ -54,6 +54,29 @@
                 $conn->close();
                 ?>
             </tbody>
+
+
+        <!--Total Amount to Date, SUM() of the "total amount" column-->
+        <table class="extra_boxes">
+        <thead>
+                <tr>
+                    <th>Total Amount to Date </th>
+                </tr>
+        </thead>
+                </tbody>
+                    <td><?php 
+                    $con = mysqli_connect("localhost", "root", "", "units");
+                    $results = mysqli_query($con, "SELECT sum(total_amount) FROM other_repairs WHERE unit_num = 99 ")
+                        or die(mysqli_error());
+                    while($rows = mysqli_fetch_array($results)) {?>
+                    <?php echo $rows['sum(total_amount)'] ?>
+                    
+                    <?php
+                    }
+                    ?>
+                    </td>
+                </tr>
+                </tbody>
         </table>
     
 

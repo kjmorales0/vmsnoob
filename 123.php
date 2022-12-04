@@ -29,6 +29,7 @@
         <script>
 
             //Function to calculate next oil change in kilometers
+             //User inputs current KMs and it outputs in how many KMs the next oil change will be, (every 5,000 kms)
             function calculate() {
             var field1=document.getElementById("num1").value;
             var field2=document.getElementById("num2").value;

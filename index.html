@@ -35,9 +35,6 @@
             var user_search = document.getElementById("user_input").value;
             var error = "Unit Not Found. Try Again";
 
-            if (user_search.length < 2 || user_search.length > 3) {
-              alert(error);
-            }
 
             if (user_search == "101") {
               window.location.href = "http://localhost:3000/101.php";
@@ -48,6 +45,10 @@
             else if (user_search == "99"){
               window.location.href = "http://localhost:3000/99.php";
             }
+            else{
+              alert(error);
+            }
+            
           };
       
         </script>
@@ -100,7 +101,7 @@
             Commercial Division
           </button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="99.php">Unit 099</a></li>
+            <li><a class="dropdown-item" href="99.php">Unit 99</a></li>
           </ul>
         </div>
 

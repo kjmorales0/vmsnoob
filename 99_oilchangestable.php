@@ -2,7 +2,7 @@
 <html lan="en">
 
     <head>
-        
+    <a href="99.php"><img src="vmsnoob_logocropped.png" alt="logo" id="pagelogo"></a>
         <!--CSS for units pages-->
         <link href="units.css" rel="stylesheet">
         
@@ -21,6 +21,7 @@
                 <th>Date</th>
                 <th>Provider</td>
                 <th>Labour Hours</th>
+                <th>Cost</th>
                 <th>Current KMs</th>
             </tr>
             </thead>
@@ -40,7 +41,7 @@
                 // output data of each row
                     while($row = $result->fetch_assoc()) {
                         echo "<tr><td>" . $row["unit_num"]. "</td><td>" . $row["date"] . "</td><td>" .$row["providers"]. "</td><td>"
-                            . $row["labour_hours"]. "</td><td>" .$row["current_kms"] . "</td></tr>";
+                            . $row["labour_hours"]. "</td><td>".$row["cost"]. "</td><td>" .$row["current_kms"] . "</td></tr>";
                     }
                         echo "</table>";
                     } else { 
@@ -77,6 +78,31 @@
         </table>
     
         
+
+        <table class="extra_boxes">
+            <thead>
+                <tr>
+                    <th>Total Cost </th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                        <?php 
+                    $con = mysqli_connect("localhost", "root", "", "units");
+                    $results = mysqli_query($con, "SELECT sum(cost) FROM oil_changes WHERE unit_num = 99 ")
+                        or die(mysqli_error());
+                    while($rows = mysqli_fetch_array($results)) {?>
+                    <?php echo $rows['sum(cost)'] ?>
+                    
+                    <?php
+                    }
+                    ?>
+                    </td>
+                </tr>
+                </tbody>
+        </table>
+    
     </body>
 </html>
 

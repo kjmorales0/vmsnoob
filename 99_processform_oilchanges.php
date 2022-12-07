@@ -8,6 +8,7 @@ $unit_num = filter_input(INPUT_POST, "unit_num", FILTER_VALIDATE_INT);
 $date = $_POST["date"];
 $providers = $_POST["providers"];
 $labour_hours = filter_input(INPUT_POST, "labour_hours", FILTER_VALIDATE_FLOAT);
+$cost = filter_input(INPUT_POST, "cost", FILTER_VALIDATE_FLOAT);
 $current_kms = filter_input(INPUT_POST, "current_kms", FILTER_VALIDATE_INT);
 
 
@@ -30,8 +31,8 @@ if (mysqli_connect_errno()) {
 }
 
 //SQL query to insert user input into databse
-$sql = "INSERT INTO oil_changes (unit_num, date, providers, labour_hours, current_kms) 
-        VALUES (?,?,?,?,?)";
+$sql = "INSERT INTO oil_changes (unit_num, date, providers, labour_hours, cost, current_kms) 
+        VALUES (?,?,?,?,?,?)";
 
 $stmt = mysqli_stmt_init($conn);
 
@@ -39,11 +40,12 @@ if ( ! mysqli_stmt_prepare($stmt, $sql)) {
     die(mysqli_error($conn));
 }
 
-mysqli_stmt_bind_param($stmt, "issdi",
+mysqli_stmt_bind_param($stmt, "issddi",
                        $unit_num,
                        $date,
                        $providers,
                        $labour_hours,
+                       $cost,
                        $current_kms);
 
 mysqli_stmt_execute($stmt);

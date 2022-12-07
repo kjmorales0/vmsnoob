@@ -40,6 +40,10 @@
         }
     };
 
+    function record_saved() {
+        document.getElementById("submit_button").value;
+        alert("Record Saved");
+    };
 
     //"Oil Change History" Button Redirects you to the Oil Changes Table page
     function oilchangestable() {
@@ -223,6 +227,7 @@
                 <td>Date</td>
                 <td>Provider</td>
                 <td>Labour Hour(s)</td>
+                <td>Cost</td>
                 <td>Current KMs</td>
             </tr>
         </thead>
@@ -233,13 +238,14 @@
                 <td><input type="date" id="date" name="date" required></td>
                 <td><input type="text" name="providers" required></td>
                 <td><input type="text" id="labour_hours" name="labour_hours" required></td>
+                <td><input type="text" id="cost" name="cost"></td>
                 <td><input type="text" id="current_kms" name="current_kms"  required></td>
             </tr>
         </tbody>
     </table>
 
     <!--Submit Button, which submits user input to databse-->
-    <input type="submit" value="Submit" class="submitbutton_oil">
+    <input type="submit" value="Submit" class="submitbutton_oil" id="submit_button" onclick="record_saved()">
     </form>
     </div>
 
@@ -276,7 +282,7 @@
     </table>
 
     <!--Submit Button, which submits user input to databse-->
-    <input type="submit" value="Submit" class="submitbutton_repairs">
+    <input type="submit" value="Submit" class="submitbutton_repairs" id="submit_button" onclick="record_saved()">
     </form>
 
     <!--Maintenance History Button, which redirects you to Maintenance History Page-->
